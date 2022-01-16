@@ -1,0 +1,18 @@
+.indexes-title {
+  font-family: Playfair Display;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+.indexesGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 155px;
+}

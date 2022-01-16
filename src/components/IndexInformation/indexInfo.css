@@ -1,0 +1,42 @@
+.data-block {
+  font-family: Inter;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 1px 0px #00000040;
+  width: 286px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.data-block__index-type {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.data-block__price {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.data-block__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-block__usd-capitalization {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.data-block__percent {
+  color: #03CEA4;
+  font-size: 15px;
+}

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState} from 'react';
+import { getDataFromIndexes } from './ethereumAPI';
+import { IndexesGroup } from './components/IndexesGroup/IndexesGroup';
 import './App.css';
 
 function App() {
+  const [ethData, setEthData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getDataFromIndexes().then(res => res);
+      setEthData(data);
+    }
+
+    fetchData();
+  }, []);
+
+  console.log(ethData);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="heading">
+          <a className="logotype">Logotype</a>
+          <button type="button" className="connect-wallet-btn">Connect wallet</button>
+        </div>
+        {ethData.length > 0 && <IndexesGroup indexes={ethData} />}
+      </div>
     </div>
   );
 }
