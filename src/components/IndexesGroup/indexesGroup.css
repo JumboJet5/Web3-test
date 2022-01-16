@@ -1,3 +1,7 @@
+.group-section {
+  padding-bottom: 50px;
+}
+
 .indexes-title {
   font-family: Playfair Display;
   font-size: 54px;
@@ -5,14 +9,44 @@
   font-weight: 700;
   line-height: 61px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
-
 
 .indexesGroup {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
-  padding-bottom: 155px;
+  padding-bottom: 40px;
+}
+
+.index-type {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.index-group {
+  margin: 0 auto;
+}
+
+@media (max-width: 1305px){
+  .index-group {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 959px){
+  .index-group {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 640px){
+  .index-group {
+    max-width: 300px;
+  }
 }

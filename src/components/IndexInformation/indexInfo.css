@@ -3,6 +3,7 @@
   background-color: #FFFFFF;
   box-shadow: 0px 0px 1px 0px #00000040;
   width: 286px;
+  flex:0 0 auto;
   border-radius: 10px;
   padding: 20px;
 }
