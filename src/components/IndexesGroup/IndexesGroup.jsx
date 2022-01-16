@@ -3,10 +3,13 @@ import { v4 as uuid_v4 } from "uuid";
 import './indexesGroup.css';
 
 export const IndexesGroup = ({ indexes }) => {
-  const otherIndexes = indexes.filter(index => index.name.split(' ').slice(0, -1).join(' ') === 'Other Index');
-  const defiIndexs = indexes.filter(index => index.name.split(' ').slice(0, -1).join(' ') === 'DeFi Index');
+  const filterByIndex = (indexArray, indType) => {
+    return indexArray.filter(index => index.name.split(' ').slice(0, -1).join(' ') === indType);
+  }
 
-  console.log(indexes);
+  const otherIndexes = filterByIndex(indexes, 'Other Index');
+  const defiIndexs = filterByIndex(indexes, 'DeFi Index');
+
   return (
     <section className="group-section">
       <h1 className="indexes-title">All Indeces</h1>
