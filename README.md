@@ -10,3 +10,6 @@ Request was made with Infura blockchain node provider for Web3
 
 
 Stack used:  React with Javascript as main language/ plain css/ html
+
+
+[DEMO]('https://val-space.github.io/Web3-test/');
