@@ -296,7 +296,7 @@ module.exports = function (webpackEnv) {
       // if there are any conflicts. This matches Node resolution mechanism.
       // https://github.com/facebook/create-react-app/issues/253
       fallback: { 
-        "crypto": require.resolve("stream-browserify"),
+        "crypto": false,
         "http": require.resolve("stream-http"),
         "https": require.resolve("https-browserify"),
         "stream": require.resolve("stream-browserify"),
