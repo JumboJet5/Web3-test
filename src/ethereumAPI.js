@@ -19,7 +19,7 @@ export const getIndexes = async () => {
   try {
     const groups = await getGroups();
     const groupIndexes = [].concat.apply([], groups.map(group => group.indexes));
-  
+
     return groupIndexes;
   } catch(e) {
     console.error(e);
@@ -30,7 +30,7 @@ export const getDataFromIndexes = async () => {
   try {
     const indexes = await getIndexes();
     const indexesData = Promise.all(indexes.map(index => contract.methods.getIndex(index).call()))
-  
+
     return indexesData;
   } catch(e) {
     console.error(e);
