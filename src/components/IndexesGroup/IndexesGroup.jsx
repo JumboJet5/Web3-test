@@ -14,14 +14,20 @@ export const IndexesGroup = ({ indexes }) => {
     <section className="group-section">
       <h1 className="indexes-title">All Indeces</h1>
       <div className="index-group">
-        <h2 className="index-type">DeFi Index</h2>
         <div className="indexesGroup">
+          <h2 className="index-type">DeFi Index</h2>
+          <div className="empty-grid-el"></div>
+          <div className="empty-grid-el"></div> 
+          <div className="empty-grid-el"></div>
           {defiIndexs.map(index => <IndexInformation key={uuid_v4()} indexData={index} />)}
         </div>
       </div>
       <div className="index-group">
-        <h2 className="index-type">Other Index</h2>
         <div className="otherIndexesGroup indexesGroup">
+          <h2 className="index-type">Other Index</h2>
+          <div className="empty-grid-el"></div>
+          <div className="empty-grid-el"></div> 
+          <div className="empty-grid-el"></div>
           {otherIndexes.map(index => <IndexInformation key={uuid_v4()} indexData={index} />)}
         </div>
       </div>

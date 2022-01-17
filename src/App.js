@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="heading">
-          <a href="/" className="logotype">Logotype</a>
+          <a href="#" className="logotype">Logotype</a>
           <button type="button" className="connect-wallet-btn">Connect wallet</button>
         </div>
         {error

@@ -296,10 +296,11 @@ module.exports = function (webpackEnv) {
       // if there are any conflicts. This matches Node resolution mechanism.
       // https://github.com/facebook/create-react-app/issues/253
       fallback: { 
-        crypto: false,
+        "crypto": require.resolve("stream-browserify"),
         "http": require.resolve("stream-http"),
         "https": require.resolve("https-browserify"),
-        "stream": false,
+        "stream": require.resolve("stream-browserify"),
+        "buffer": require.resolve("buffer/"),
         "os": require.resolve("os-browserify"),
       },
       modules: ['node_modules', paths.appNodeModules].concat(
@@ -331,6 +332,7 @@ module.exports = function (webpackEnv) {
         // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
         // please link the files into your node_modules/ and let module-resolution kick in.
         // Make sure your source files are compiled, as they will not be processed in any way.
+        
         new ModuleScopePlugin(paths.appSrc, [
           paths.appPackageJson,
           reactRefreshRuntimeEntry,
