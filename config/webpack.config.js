@@ -300,7 +300,7 @@ module.exports = function (webpackEnv) {
         "http": require.resolve("stream-http"),
         "https": require.resolve("https-browserify"),
         "stream": require.resolve("stream-browserify"),
-        "buffer": require.resolve("buffer/"),
+        "buffer": require.resolve("buffer-browserify"),
         "os": require.resolve("os-browserify"),
       },
       modules: ['node_modules', paths.appNodeModules].concat(
@@ -754,6 +754,10 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+        Buffer: ['buffer', 'Buffer']
+      }),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
