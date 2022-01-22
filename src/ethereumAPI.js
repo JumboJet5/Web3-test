@@ -18,6 +18,7 @@ const getGroups = async () => {
 export const getIndexes = async () => {
   try {
     const groups = await getGroups();
+    // тут не потрібно було мапити масив груп в ід груп, а форматувати відразу індекси по своїх масивах
     const groupIndexes = [].concat.apply([], groups.map(group => group.indexes));
 
     return groupIndexes;
